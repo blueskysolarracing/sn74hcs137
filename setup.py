@@ -40,7 +40,7 @@ setup(
     packages=find_packages(),
     install_requires=[
          'python-periphery>=2.4.1,<3',
-    ]
+    ],
     python_requires='>=3.11',
     package_data={'sn74hcs137': ['py.typed']},
 )
