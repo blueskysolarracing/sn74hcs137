@@ -14,21 +14,21 @@ class SN74HCS137:
     class Address(IntEnum):
         """The enum class for addresses."""
 
-        Y0: int = 0
+        Y0: int = 0b000
         """Output 0."""
-        Y1: int = 1
+        Y1: int = 0b001
         """Output 1."""
-        Y2: int = 2
+        Y2: int = 0b010
         """Output 2."""
-        Y3: int = 3
+        Y3: int = 0b011
         """Output 3."""
-        Y4: int = 4
+        Y4: int = 0b100
         """Output 4."""
-        Y5: int = 5
+        Y5: int = 0b101
         """Output 5."""
-        Y6: int = 6
+        Y6: int = 0b110
         """Output 6."""
-        Y7: int = 7
+        Y7: int = 0b111
         """Output 7."""
 
     ADDRESS_SELECT_0_GPIO_DIRECTION: ClassVar[str] = 'out'
@@ -96,15 +96,15 @@ class SN74HCS137:
         ):
             raise ValueError('latch enable GPIO not active low')
 
-    def enable(self) -> None:
-        """Enable the line decoder.
+    def enable_latch(self) -> None:
+        """Enable the latch.
 
         :return: ``None``.
         """
         self.latch_enable_gpio.write(True)
 
-    def disable(self) -> None:
-        """Disable the line decoder.
+    def disable_latch(self) -> None:
+        """Disable the latch.
 
         :return: ``None``.
         """
