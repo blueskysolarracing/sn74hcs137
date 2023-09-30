@@ -146,7 +146,7 @@ class SN74HCS137:
         """
         self.disable_latch()
         self.strobe_input_0_gpio.write(True)
-        self.strobe_input_0_gpio.write(True)
+        self.strobe_input_1_gpio.write(True)
         self.address_select_0_gpio.write(bool(address & (1 << 0)))
         self.address_select_1_gpio.write(bool(address & (1 << 1)))
         self.address_select_2_gpio.write(bool(address & (1 << 2)))
@@ -158,4 +158,4 @@ class SN74HCS137:
         :return: ``None``.
         """
         self.strobe_input_0_gpio.write(False)
-        self.strobe_input_0_gpio.write(False)
+        self.strobe_input_1_gpio.write(False)
