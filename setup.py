@@ -7,7 +7,7 @@ with open('README.rst', 'r') as file:
 
 setup(
     name='sn74hcs137',
-    version='0.0.0.dev1',
+    version='0.0.0.dev2',
     description='A Python driver for Texas instruments SN74HCS137 3- to 8-Line Decoder/Demultiplexer with Address Latches and SchmittTrigger Inputs',
     long_description=long_description,
     long_description_content_type='text/x-rst',
